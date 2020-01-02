@@ -21,29 +21,29 @@ In such case, `Fastlane's` native [`changelog_from_git_commits`](https://docs.fa
 This plugin resolves latest release branch using [`git ls-remote`](https://git-scm.com/docs/git-ls-remote.html) (always available).
 
 ```bash
-git ls-remote --sort='v:refname' --heads origin refs/heads/release/*```
+git ls-remote --sort='v:refname' --heads origin refs/heads/release/*
 ```
-refs/heads/release/4.267.0
-refs/heads/release/4.269.0
-refs/heads/release/4.269.1
-refs/heads/release/4.270.0
-refs/heads/release/4.270.1
+refs/heads/release/4.267.0&nbsp;
+refs/heads/release/4.269.0&nbsp;
+refs/heads/release/4.269.1&nbsp;
+refs/heads/release/4.270.0&nbsp;
+refs/heads/release/4.270.1&nbsp;
 
 And then, fetches a changelog (JSON) between the current branch and the latest release branch using [`GitLab API`](https://docs.gitlab.com/ee/api/repositories.html#compare-branches-tags-or-commits).
 
 In a case then CI _is_ on release branch currently - a changelog between current and previous release branches is constructed.
 
 ## Usage:
-```
+```bash
 change_log = gitlab_changelog(
     current_branch: "develop",
     compare_branch_prefix: "release",
     gitlab_API_baseURL: "http://git.yourcompany.net/api/v4",
     gitlab_project_id: "123",
-    gitlab_API_token: "secret_gitlab_token" 
+    gitlab_API_token: "secret_gitlab_token"
   )
  ```
- 
+
  **Params:**
  * _current_branch_ : `Actions.git_branch` or `ENV['CI_COMMIT_REF_NAME']` (default)
  * _compare_branch_prefix_ : default is `release` to compare against `release/*.*.*` branches
@@ -53,9 +53,9 @@ change_log = gitlab_changelog(
 
  **Output:**
  _Fetching changeLog from: release/4.270.1 to: develop (GET http://git.yourcompany.net/api/v4/projects/123/repository/compare)_
- 
- DEV0001 Feature 2 (Thom Yorke) 2019-12-31
- DEV0002 Feature 1 (Jonny Greenwood) 2019-12-30
+
+DEV0001 Feature 2 (Thom Yorke) 2019-12-31&nbsp;
+DEV0002 Feature 1 (Jonny Greenwood) 2019-12-30&nbsp;
 
 ## Issues and Feedback
 
@@ -72,4 +72,3 @@ For more information about how the `fastlane` plugin system works, check out the
 ## About _fastlane_
 
 _fastlane_ is the easiest way to automate beta deployments and releases for your iOS and Android apps. To learn more, check out [fastlane.tools](https://fastlane.tools).
-
