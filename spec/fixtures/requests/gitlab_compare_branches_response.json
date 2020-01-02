@@ -1,0 +1,27 @@
+{
+  "commits": [
+  {
+    "id": "1000",
+    "short_id": "1000",
+    "title": "Merge branch 'release/1.2.0' into 'develop'",
+    "author_name": "Developer 1",
+    "author_email": "dev01@gmail.com",
+    "created_at": "2019-12-31T09:27:00+02:00"
+  },
+  {
+    "id": "123",
+    "short_id": "12",
+    "title": "Feature 1",
+    "author_name": "Developer 1",
+    "author_email": "dev01@gmail.com",
+    "created_at": "2019-12-30T10:27:00+02:00"
+  },
+  {
+    "id": "345",
+    "short_id": "34",
+    "title": "Feature 2",
+    "author_name": "Developer 2",
+    "author_email": "dev02@gmail.com",
+    "created_at": "2019-12-31T10:27:00+02:00"
+  }]
+}
