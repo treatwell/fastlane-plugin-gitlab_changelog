@@ -23,11 +23,11 @@ This plugin resolves latest release branch using [`git ls-remote`](https://git-s
 ```bash
 git ls-remote --sort='v:refname' --heads origin refs/heads/release/*
 ```
-refs/heads/release/4.267.0&nbsp;
-refs/heads/release/4.269.0&nbsp;
-refs/heads/release/4.269.1&nbsp;
-refs/heads/release/4.270.0&nbsp;
-refs/heads/release/4.270.1&nbsp;
+_refs/heads/release/4.267.0_\
+_refs/heads/release/4.269.0_\
+_refs/heads/release/4.269.1_\
+_refs/heads/release/4.270.0_\
+_refs/heads/release/4.270.1_
 
 And then, fetches a changelog (JSON) between the current branch and the latest release branch using [`GitLab API`](https://docs.gitlab.com/ee/api/repositories.html#compare-branches-tags-or-commits).
 
@@ -54,8 +54,8 @@ change_log = gitlab_changelog(
  **Output:**
  _Fetching changeLog from: release/4.270.1 to: develop (GET http://git.yourcompany.net/api/v4/projects/123/repository/compare)_
 
-DEV0001 Feature 2 (Thom Yorke) 2019-12-31&nbsp;
-DEV0002 Feature 1 (Jonny Greenwood) 2019-12-30&nbsp;
+_DEV0001 Feature 2 (Thom Yorke) 2019-12-31_\
+_DEV0002 Feature 1 (Jonny Greenwood) 2019-12-30_
 
 ## Issues and Feedback
 
